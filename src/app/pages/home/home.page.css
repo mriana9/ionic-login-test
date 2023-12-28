@@ -1,0 +1,162 @@
+.column-content {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: sans-serif;
+}
+.column-content.current-time {
+  text-align: start;
+}
+.column-content.header-icons {
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.column-content.header-icons .icon {
+  margin: auto 5px;
+}
+
+ion-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+.main-content .image-box {
+  width: 90px;
+  height: 100px;
+  box-sizing: border-box;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-content .arrow-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  color: #d2d1d1;
+  font-size: 28px;
+  transform: translateY(-50%);
+}
+
+.home-content .info {
+  width: 100%;
+  color: #a02d62;
+  text-align: center;
+  font-family: sans-serif;
+}
+.home-content .info h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+.home-content .info p {
+  font-size: 22px;
+}
+
+.eye-color {
+  color: #ddd;
+}
+
+ion-item.input-box {
+  --border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  --inner-padding-start: 10px;
+  --inner-padding-end: 10px;
+  --background: #fee8f2;
+  --border-color: transparent;
+}
+
+.forget-password {
+  color: #a02d62;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.forget-password.no-account {
+  text-align: center;
+}
+.forget-password.no-account p {
+  margin-top: 50px;
+}
+.forget-password.register {
+  text-align: center;
+}
+.forget-password.register p {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+ion-button.primary-btn {
+  width: 100%;
+  font-size: 24px;
+  font-family: sans-serif;
+  --background: #a02d62;
+  --border-radius: 10px !important;
+}
+
+.border-box {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.border-box p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  width: 50px;
+  color: #a02d62;
+  text-align: center;
+  font-weight: 700;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+.border-box::before {
+  content: "";
+  width: 90vw;
+  height: 1px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fee8f2;
+}
+
+.input-box-shadow {
+  border: 1px solid #eee !important;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  justify-content: space-between;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+.input-box-shadow ion-text.input-box {
+  --background: #fff !important;
+  --border-color: transparent;
+  --border-radius: 10px;
+  --border-color: transparent;
+  color: #a02d62;
+  font-size: 24px;
+  font-weight: 600;
+}
+.input-box-shadow .google-icon {
+  font-size: 22px;
+}
+.input-box-shadow.facebook-box {
+  color: #fff;
+  background-color: #1877f2;
+}
+.input-box-shadow.facebook-box ion-text.input-box {
+  color: #fff;
+}/*# sourceMappingURL=home.page.css.map */

@@ -1,0 +1,95 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@font-face {
+  font-family: "Tajawal-Bold";
+  src: url(/assets/fonts/Tajawal-Bold.ttf);
+}
+@font-face {
+  font-family: "Tajawal-Regular";
+  src: url(/assets/fonts/Tajawal-Regular.ttf);
+}
+.main-section {
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.main-section::after {
+  content: "";
+  width: 100vw;
+  height: 400px;
+  position: absolute;
+  left: 0%;
+  top: -30%;
+  opacity: 0.5;
+  z-index: -1;
+  background-position: 100% 100%;
+  background-size: cover;
+  background-image: url(/assets/images/icon/top-bg.png);
+}
+.main-section::before {
+  content: "";
+  width: 120vw;
+  height: 400px;
+  position: absolute;
+  left: -5deg;
+  bottom: -30%;
+  opacity: 0.5;
+  z-index: -1;
+  background-position: 100% 100%;
+  background-size: cover;
+  background-image: url(/assets/images/icon/bottom-bg.png);
+}
+
+.bx-chevron-left {
+  font-size: 36px;
+  color: var(--ion-color-primary);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .title {
+  font-size: 20px;
+  font-family: "Tajawal-Regular";
+  min-width: -moz-max-content !important;
+  min-width: max-content !important;
+}
+
+app-e-tabs ion-router-outlet > .ion-page {
+  animation: fadeIn 0.3s 1 forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=global.css.map */

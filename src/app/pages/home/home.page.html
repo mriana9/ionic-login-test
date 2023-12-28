@@ -1,0 +1,117 @@
+<ion-content class="ion-padding">
+    <!--header-start-->
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6">
+                <div class="column-content current-time">
+                    <ion-label>
+                        {{ currentTime }}
+                    </ion-label>
+                </div>
+            </ion-col>
+
+            <ion-col size="6">
+                <div class="column-content header-icons">
+                    <div class="icon">
+                        <ion-label>
+                            <ion-icon name="cellular"></ion-icon>
+                        </ion-label>
+                    </div>
+                    <div class="icon">
+                        <ion-label>
+                            <ion-icon name="wifi-sharp"></ion-icon>
+                        </ion-label>
+                    </div>
+                    <div class="icon">
+                        <ion-label>
+                            <ion-icon name="battery-full-outline"></ion-icon>
+                        </ion-label>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!--/.header-end-->
+
+
+    <!--main-content-start-->
+    <div class="main-content">
+        <div class="image-box">
+            <ion-img src="assets/images/logo/logo.png" alt="Logo Image"></ion-img>
+        </div>
+        <div class="arrow-icon">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="home-content">
+        <ion-text class="info">
+            <h1>مرحباً بعودتك</h1>
+        </ion-text>
+        <ion-text class="info">
+            <p> سجل الدخول ليمكنك الدخول الى حسابك</p>
+        </ion-text>
+    </div>
+
+    <ion-item class="input-box">
+        <ion-input class="input-info" placeholder="البريد الالكتروني"  [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-box ion-margin-top">
+        <ion-input class="input-info" placeholder="كلمة المرور" [type]="showPassword ? 'text' : 'password'"
+            [(ngModel)]="password"></ion-input>
+        <ion-icon class="eye-color" slot="end" [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"
+            (click)="togglePasswordVisibility()"></ion-icon>
+    </ion-item>
+
+    <ion-router-link class="ion-margin-top" routerLink="#">
+        <ion-text class="forget-password">
+            <p> نسيت كلمة المرور ؟ </p>
+        </ion-text>
+    </ion-router-link>
+    
+    
+    <ion-text *ngIf="successMessage" color="{{ successColor }}">
+        {{ successMessage }}
+    </ion-text>
+    <ion-text *ngIf="errorMessage" color="{{ errorColor }}">
+        {{ errorMessage }}
+    </ion-text>
+
+    <ion-button class="primary-btn" (click)="login()">
+        التالي
+    </ion-button>
+
+    <div class="border-box">
+        <p>أو</p>
+    </div>
+
+    <div class="input-box-shadow ion-margin-top">
+        <ion-text class="input-box">المتابعة باستخدام جوجل</ion-text>
+        <ion-icon class="google-icon" name="logo-google"></ion-icon>
+    </div>
+
+    <div class="input-box-shadow facebook-box ion-margin-top">
+        <ion-text class="input-box">المتابعة باستخدام فيسبوك</ion-text>
+        <ion-icon class="google-icon" name="logo-facebook"></ion-icon>
+    </div>
+
+    <ion-router-link class="ion-margin-top" routerLink="#">
+        <ion-text class="forget-password">
+            <p>المتابعة باستخدام رقم الهاتف</p>
+        </ion-text>
+    </ion-router-link>
+
+    <ion-router-link class="ion-margin-top" routerLink="#">
+        <ion-text class="forget-password no-account">
+            <p> ليس لديك حساب ؟</p>
+        </ion-text>
+    </ion-router-link>
+
+    <ion-router-link class="ion-margin-top" routerLink="#">
+        <ion-text class="forget-password register">
+            <p> التسجيل</p>
+        </ion-text>
+    </ion-router-link>
+
+    <!--/.main-content-start-->
+</ion-content>
