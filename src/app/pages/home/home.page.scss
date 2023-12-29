@@ -4,14 +4,14 @@
     font-family: sans-serif;
 
     &.current-time {
-        text-align: start;
+        text-align: end;
     }
 
     &.header-icons {
         text-align: end;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
 
         .icon {
             margin: auto 5px;
